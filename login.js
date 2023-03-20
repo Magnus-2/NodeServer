@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 
 const secretkey = "egci427";
 
-mongoose.connect('mongodb+srv://cloud:bPKDrNLTOX7v1BKz@contactlist.kogzfoe.mongodb.net/?retryWrites=true&w=majority/ContactList', { useNewUrlParser: true })
+mongoose.connect('mongodb+srv://cloud:bPKDrNLTOX7v1BKz@contactlist.kogzfoe.mongodb.net/ContactList', { useNewUrlParser: true })
     .then(() => console.log('Connected to MongoDB'))
     .catch((err) => console.log('Failed to connect to MongoDB', err))
 
@@ -36,7 +36,7 @@ app.post('/', async (req, res) => {
         }, secretkey);
         res.json({message: 'Authenticated! Use this token in the "Authorization" header', token: token});
     } else {
-        res.json({message: 'username or password is invalid',  "user": {
+        res.json({message: 'username or password is invalid',  "account": {
             "username": user.username,
             "password": user.password
         }})
