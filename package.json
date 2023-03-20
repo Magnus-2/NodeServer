@@ -5,5 +5,10 @@
     "jsonwebtoken": "^9.0.0",
     "md5": "^2.3.0",
     "mongoose": "^6.2.8"
+  },
+  "scripts": {
+    "start": "node server.js"
   }
 }
+
+
