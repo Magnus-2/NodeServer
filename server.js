@@ -18,7 +18,7 @@ User = require('./api/models/userListModel')
 // bodyParser = require('body-parser')
 
 mongoose.Promise = global.Promise
-mongoose.connect('mongodb+srv://cloud:bPKDrNLTOX7v1BKz@contactlist.kogzfoe.mongodb.net/?retryWrites=true&w=majority', function(error){
+mongoose.connect('mongodb+srv://cloud:bPKDrNLTOX7v1BKz@contactlist.kogzfoe.mongodb.net/?retryWrites=true&w=majority/Contactlist', function(error){
     if(error) throw error
     console.log('Successfully connected');
 })
